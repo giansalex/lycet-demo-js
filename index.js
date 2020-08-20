@@ -89,12 +89,12 @@ async function main() {
 
         const codigoCdr = parseInt(cdrResult.code);
         if (codigoCdr === 0) {
-            console.log('FACTURA ACEPTADA');
+            console.log('ESTADO: ACEPTADA');
         } else if (codigoCdr >= 4000) {
-            console.log('FACTURA ACEPTADA CON OBSERVACIONES:');
+            console.log('ESTADO: ACEPTADA CON OBSERVACIONES:');
             console.log(cdrResult.notes)
         } else {
-            console.log('FACTURA RECHAZADA');
+            console.log('ESTADO: RECHAZADA');
         }
 
         console.log('RESULTADO DESCRIPCION SUNAT: ', cdrResult.description);
