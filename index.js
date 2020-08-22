@@ -3,9 +3,9 @@ const fs = require('fs');
 
 async function main() {
 
-    const tokenApi = '123456';
+    const tokenApi = 'greenter';
     const lycetApi = axios.create({
-        baseURL: 'http://localhost:8000/',
+        baseURL: 'https://greenter-lycet.herokuapp.com/api/v1/',
         headers: {
             'Content-Type': 'application/json; charset=utf-8',
             'Accept': 'application/json'
@@ -70,7 +70,7 @@ async function main() {
     };
 
     try {
-        const apiResponse = await lycetApi.post('api/v1/invoice/send?token=' + tokenApi, invoice);
+        const apiResponse = await lycetApi.post('invoice/send?token=' + tokenApi, invoice);
         const billResult = apiResponse.data;
 
         console.log('Guardando XML en 20123456789-01-F001-111.xml');
