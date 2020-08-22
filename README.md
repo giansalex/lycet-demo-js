@@ -1,5 +1,5 @@
 # Lycet demo - js
-Ejemplo de envío de una factura gravada a lycet (greenter api) desde nodejs.
+Ejemplo de envío de una factura gravada a [lycet](https://github.com/giansalex/lycet) (greenter api) desde nodejs.
 
 ## Ejecucion
 
