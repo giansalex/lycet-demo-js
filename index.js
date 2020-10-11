@@ -90,9 +90,10 @@ async function main() {
         const codigoCdr = parseInt(cdrResult.code);
         if (codigoCdr === 0) {
             console.log('ESTADO: ACEPTADA');
-        } else if (codigoCdr >= 4000) {
-            console.log('ESTADO: ACEPTADA CON OBSERVACIONES:');
-            console.log(cdrResult.notes)
+            if (cdrResult.notes.length > 0) {
+                console.log('CON OBSERVACIONES:');
+                console.log(cdrResult.notes)
+            }
         } else {
             console.log('ESTADO: RECHAZADA');
         }
