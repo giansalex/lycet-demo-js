@@ -20,6 +20,9 @@ async function main() {
         correlativo: '111',
         fechaEmision: '2020-08-19T12:34:00-05:00',
         tipoMoneda: 'PEN',
+        formaPago: {
+            tipo: "Contado"
+        },
         company: {
             ruc: '20123456789',
             razonSocial: 'LYCET COMPANY SAC',
